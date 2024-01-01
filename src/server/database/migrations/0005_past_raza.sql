@@ -1,0 +1,1 @@
+ALTER TABLE `emails` MODIFY COLUMN `email_type` enum('waitlistSignup','authExpired','authExpiringSoon') NOT NULL;

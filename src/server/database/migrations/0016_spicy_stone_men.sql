@@ -1,0 +1,1 @@
+CREATE INDEX `gmail_id_idx` ON `users` (`gmail_id`);

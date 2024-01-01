@@ -1,0 +1,7 @@
+{
+  "name": "Inbox Hero - Screen emails from first-time senders",
+  "short_name": "Inbox Hero",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

@@ -1,0 +1,1 @@
+CREATE INDEX `user_id_status_idx` ON `screeners` (`user_id`,`status`);

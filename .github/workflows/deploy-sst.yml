@@ -1,0 +1,51 @@
+name: Deploy SST
+on:
+  push:
+    branches:
+      - app
+      - stg
+
+concurrency: deploy-sst-${{ github.ref }}
+
+jobs:
+  build_deploy_application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Get secrets from Parameter Store and generate .env file
+        run: |
+          SECRET_PATH="/sst/inbox-hero/${{ github.ref == 'refs/heads/app' && 'app' || 'stg' }}/Secret/"
+          PARAMETERS=$(aws ssm get-parameters-by-path --path $SECRET_PATH --recursive --with-decryption --query "Parameters[].{ Name:Name,Value:Value }" --output json | jq -c)
+          node .github/generate-dot-env.js $PARAMETERS ${{ github.ref == 'refs/heads/app' && 'app' || 'stg' }}
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+      - name: Deploy
+        run: pnpm sst deploy --stage ${{ github.ref == 'refs/heads/app' && 'app' || 'stg' }}

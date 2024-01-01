@@ -1,0 +1,6 @@
+#cf-turnstile {
+  width: 100% !important
+}
+#cf-turnstile > iframe {
+  width: 100% !important
+}

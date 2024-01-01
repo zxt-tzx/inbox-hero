@@ -1,0 +1,1 @@
+CREATE INDEX `refresh_token_idx` ON `users` (`refresh_token`);

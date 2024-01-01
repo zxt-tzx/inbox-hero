@@ -1,0 +1,1 @@
+ALTER TABLE `senders` ADD `from_name` varchar(255);

@@ -1,0 +1,74 @@
+{
+  "compilerOptions": {
+    // Base options
+    "target": "es2022",
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+
+    // strictness
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "forceConsistentCasingInFileNames": true,
+    // strictness: optional to have
+    "preserveConstEnums": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+
+    // if transpiling with TypeScript
+    // "moduleResolution": "NodeNext",
+    // "module": "NodeNext",
+    // "outDir": "dist",
+    // "sourceMap": true,
+
+    // NOT transpiling with TypeScript
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "noEmit": true,
+
+    // code runs in DOM
+    "lib": ["dom", "dom.iterable", "es2022"],
+    // doesn't run in DOM
+    // "lib": ["es2022"],
+
+    // building for a library
+    // "declaration": true,
+    // building for a library in a monorepo
+    // "composite": true,
+    // "declarationMap": true,
+
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "prettier.config.cjs",
+    ".eslintrc.cjs"
+  ],
+  "exclude": ["node_modules"]
+}

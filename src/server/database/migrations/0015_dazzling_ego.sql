@@ -1,0 +1,1 @@
+ALTER TABLE `limbo_emails` ADD `decision` enum('in','out','undecided') DEFAULT 'undecided' NOT NULL;

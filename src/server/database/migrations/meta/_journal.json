@@ -1,0 +1,153 @@
+{
+  "version": "5",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1698370189004,
+      "tag": "0000_fancy_molecule_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1698559860771,
+      "tag": "0001_classy_star_brand",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1698574616665,
+      "tag": "0002_daffy_richard_fisk",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1698677190476,
+      "tag": "0003_bitter_komodo",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1698677937983,
+      "tag": "0004_striped_big_bertha",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1699102579854,
+      "tag": "0005_past_raza",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1699103685856,
+      "tag": "0006_plain_lady_bullseye",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1699110971907,
+      "tag": "0007_striped_medusa",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1699242024714,
+      "tag": "0008_swift_shockwave",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1699243614538,
+      "tag": "0009_flawless_mentor",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1699258840044,
+      "tag": "0010_little_miss_america",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1699688854241,
+      "tag": "0011_quick_redwing",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1699716861230,
+      "tag": "0012_spooky_the_captain",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1700044464671,
+      "tag": "0013_typical_maria_hill",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "5",
+      "when": 1700055639930,
+      "tag": "0014_lyrical_silk_fever",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "5",
+      "when": 1700662674526,
+      "tag": "0015_dazzling_ego",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "5",
+      "when": 1700793419125,
+      "tag": "0016_spicy_stone_men",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "5",
+      "when": 1700820928329,
+      "tag": "0017_lean_hiroim",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "5",
+      "when": 1700882380736,
+      "tag": "0018_lonely_valkyrie",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "5",
+      "when": 1701955412892,
+      "tag": "0019_dark_red_shift",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "5",
+      "when": 1702225539139,
+      "tag": "0020_purple_mojo",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `history_id` bigint unsigned;
